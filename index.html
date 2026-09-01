@@ -64,11 +64,12 @@ function formasiRender(){
  ].map(x=>`<div class="mini"><span class="muted">${x[0]}</span><b>${x[1]}</b><span class="muted">${x[2]}</span></div>`).join('');
  const max=Math.max(...D.formasi.map(x=>x.formasi),1);
  f('formasiChart').innerHTML=D.formasi.map(x=>`<div class="formasi-barrow"><span>${x.kanwil}</span><div class="track"><div class="formasi-bar" style="width:${Math.max(x.aktif/max*100,2)}%"></div></div><b>${x.aktif} / ${x.formasi}</b></div>`).join('');
+ const zeroWilayah=D.formasi.filter(x=>Number(x.aktif||0)===0).map(x=>x.kanwil);
  f('formasiStatus').innerHTML=[
-  ['Wilayah kekurangan',s.kekurangan,'status-kurang'],
-  ['Wilayah sesuai',s.sesuai,'status-sesuai'],
-  ['Wilayah kelebihan',s.kelebihan,'']
- ].map(x=>`<div class="card" style="margin-top:8px;padding:11px"><b>${x[0]}</b><div style="font-size:20px;font-weight:800" class="${x[2]}">${n(x[1])}</div><span class="muted">dari ${n(s.wilayah)} wilayah</span></div>`).join('');
+  ['Wilayah kekurangan',s.kekurangan,'status-kurang',`dari ${n(s.wilayah)} wilayah`],
+  ['Wilayah sesuai',s.sesuai,'status-sesuai',`dari ${n(s.wilayah)} wilayah`],
+  ['Wilayah tanpa PL-II aktif (jumlah = 0)',zeroWilayah.length,'status-kurang',`dari ${n(s.wilayah)} wilayah`],
+ ].map(x=>`<div class="card" style="margin-top:8px;padding:11px"><b>${x[0]}</b><div style="font-size:20px;font-weight:800" class="${x[2]}">${n(x[1])}</div><span class="muted">${x[3]}</span>${x[0].startsWith('Wilayah tanpa')&&zeroWilayah.length?`<div style="margin-top:7px;font-size:12px;line-height:1.55"><b>Wilayah:</b> ${zeroWilayah.join(' · ')}</div>`:''}</div>`).join('');
  f('formasiTable').innerHTML=D.formasi.map(x=>`<tr><td>${x.no}</td><td><b>${x.kanwil}</b></td><td>${n(x.formasi)}</td><td>${n(x.aktif)}</td><td class="${x.selisih<0?'status-kurang':x.selisih>0?'status-sesuai':''}">${x.selisih>0?'+':''}${x.selisih}</td><td>${pc(x.capaian)}</td><td class="${x.status==='Kekurangan'?'status-kurang':'status-sesuai'}">${x.status}</td></tr>`).join('');
 }
 function history(){let d=D.hist.filter(x=>kf.value==='ALL'||(x.kanwil||x.hist_kanwil)===kf.value).sort((a,b)=>(b.y2025?.pokok||0)-(a.y2025?.pokok||0));f('hist').innerHTML=d.map((x,i)=>{let a=x.y2024?.pokok||0,b=x.y2025?.pokok||0,g=a&&b?b/a-1:null;return`<tr><td>${i+1}</td><td><b>${x.nama}</b></td><td>${x.kanwil||x.hist_kanwil||'-'}</td><td>${x.y2023?.pokok?rp(x.y2023.pokok):'-'}</td><td>${x.y2023?.pnbp?rp(x.y2023.pnbp):'-'}</td><td>${x.y2023?.frekuensi?n(x.y2023.frekuensi):'-'}</td><td>${a?rp(a):'-'}</td><td>${x.y2024?.pnbp?rp(x.y2024.pnbp):'-'}</td><td>${x.y2024?.frekuensi?n(x.y2024.frekuensi):'-'}</td><td>${b?rp(b):'-'}</td><td>${x.y2025?.pnbp?rp(x.y2025.pnbp):'-'}</td><td>${g===null?'-':pc(g)}</td></tr>`}).join('')}
