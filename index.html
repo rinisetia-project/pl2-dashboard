@@ -34,7 +34,7 @@ let a=kf.value==='ALL'
 :D.summary.find(x=>x.kanwil===kf.value);
 
 let p=a.frekuensi?a.lot/a.frekuensi:0;
-let activeRows=(D.detail||[]).filter(x=>String(x.status||'').toLowerCase()==='aktif');
+let activeRows=(D.detail||[]).filter(x=>String(x.status_keterangan||x.status||'').toLowerCase().trim()==='aktif');
 let nasional=D.active_count||activeRows.length;
 let wilayah=kf.value==='ALL'
 ?nasional
