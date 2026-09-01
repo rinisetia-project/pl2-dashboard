@@ -1,25 +1,14 @@
 <!DOCTYPE html>
 <html lang="id"><head><meta charset="utf-8"/><meta content="width=device-width,initial-scale=1" name="viewport"/><title>Executive Dashboard PL-II</title>
 <style>
-body{margin:0;font-family:Segoe UI,Arial;background:#f4f7fa;color:#163047}.wrap{max-width:1500px;margin:auto;padding:24px}.hero{background:linear-gradient(135deg,#12395b,#1b567f);color:#fff;padding:25px;border-radius:18px}.title{font-size:28px;font-weight:800}.sub{opacity:.8;margin-top:5px}.toolbar{margin-top:16px;display:flex;gap:8px;flex-wrap:wrap}select,input{padding:10px;border-radius:8px;border:1px solid #cbd7e1}.grid{display:grid;grid-template-columns:1fr 1fr;gap:15px;margin-top:15px}.card{background:#fff;border:1px solid #dce5ed;border-radius:15px;padding:17px}.kpis{display:grid;grid-template-columns:repeat(4,1fr);gap:15px;margin-top:15px}.kpi b{font-size:26px;display:block;margin:7px 0}.muted{color:#6e7f8f;font-size:11px}.tabs{display:flex;gap:7px;margin-bottom:12px}.tab{padding:7px 11px;border:1px solid #dce5ed;background:#fff;border-radius:8px;cursor:pointer;font-weight:700}.tab.active{background:#12395b;color:#fff}.pies{display:grid;grid-template-columns:1fr 1fr;gap:15px}.pie{width:180px;height:180px;border-radius:50%;margin:10px auto;position:relative}.pie:after{content:"";position:absolute;inset:36px;background:#fff;border-radius:50%}.legend{font-size:11px}.legend div{display:flex;justify-content:space-between;margin:6px 0}.bars{max-height:340px;overflow:auto}.barrow{display:grid;grid-template-columns:230px 1fr 75px;gap:8px;align-items:center;margin:8px 0;font-size:11px}.track{height:15px;background:#e8eef3;border-radius:99px}.bar{height:100%;background:#2878b5;border-radius:99px}.table{max-height:540px;overflow:auto;border:1px solid #dce5ed;border-radius:10px}table{width:100%;border-collapse:collapse;font-size:11px}th{position:sticky;top:0;background:#eaf1f6;padding:9px;text-align:left}td{padding:8px;border-bottom:1px solid #edf2f6}.badge{padding:3px 7px;border-radius:99px;font-weight:700;font-size:10px}.active{background:#e2f3e9;color:#246b4c}.inactive{background:#fde7e7;color:#943d3d}.foot{font-size:10px;color:#6e7f8f;margin-top:10px;line-height:1.5}.formasi-summary{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;margin:12px 0}.mini{background:#f7fafc;border:1px solid #e2eaf0;border-radius:10px;padding:11px}.mini b{display:block;font-size:20px;margin-top:4px}.formasi-table{max-height:520px;overflow:auto;border:1px solid #dce5ed;border-radius:10px}.formasi-table table{font-size:11px}.status-kurang{font-weight:800;color:#943d3d}.status-sesuai{font-weight:800;color:#246b4c}.formasi-bar{height:100%;background:#2878b5;border-radius:99px}.formasi-barrow{display:grid;grid-template-columns:150px 1fr 90px;gap:8px;align-items:center;margin:7px 0;font-size:11px}@media(max-width:900px){.formasi-summary{grid-template-columns:2fr 2fr}.formasi-barrow{grid-template-columns:120px 1fr 70px}}@media(max-width:600px){.formasi-summary{grid-template-columns:1fr 1fr}}@media(max-width:900px){.grid{grid-template-columns:1fr}.kpis{grid-template-columns:2fr 2fr}.pies{grid-template-columns:1fr}}@media(max-width:600px){.kpis{grid-template-columns:1fr}.wrap{padding:10px}.barrow{grid-template-columns:120px 1fr 60px}}
-.profile-grid{align-items:stretch}.channel-layout{display:grid;grid-template-columns:180px 1fr;gap:18px;align-items:center;margin-top:8px}.channel-pie{width:180px;height:180px;border-radius:50%;margin:10px auto;position:relative}.channel-pie:after{content:"264";position:absolute;inset:43px;background:#fff;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:24px;font-weight:800;color:#163047}.channel-legend div{display:flex;justify-content:space-between;gap:12px;margin:8px 0}.channel-dot{display:inline-block;width:10px;height:10px;border-radius:50%;margin-right:6px}@media(max-width:900px){.channel-layout{grid-template-columns:1fr}.channel-pie{margin:10px auto}}
-.kpi-grid{grid-template-columns:repeat(5,minmax(0,1fr));gap:14px}
-.kpi-grid .card{min-width:0}
-@media(max-width:1100px){.kpi-grid{grid-template-columns:repeat(3,minmax(0,1fr))}}
-@media(max-width:700px){.kpi-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
-</style></head><body><div class="wrap">
+body{margin:0;font-family:Segoe UI,Arial;background:#f4f7fa;color:#163047}.wrap{max-width:1500px;margin:auto;padding:24px}.hero{background:linear-gradient(135deg,#12395b,#1b567f);color:#fff;padding:25px;border-radius:18px}.title{font-size:28px;font-weight:800}.sub{opacity:.8;margin-top:5px}.toolbar{margin-top:16px;display:flex;gap:8px;flex-wrap:wrap}select,input{padding:10px;border-radius:8px;border:1px solid #cbd7e1}.grid{display:grid;grid-template-columns:1fr 1fr;gap:15px;margin-top:15px}.card{background:#fff;border:1px solid #dce5ed;border-radius:15px;padding:17px}.kpis{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:15px;margin-top:15px}.kpi b{font-size:26px;display:block;margin:7px 0}.muted{color:#6e7f8f;font-size:11px}.tabs{display:flex;gap:7px;margin-bottom:12px}.tab{padding:7px 11px;border:1px solid #dce5ed;background:#fff;border-radius:8px;cursor:pointer;font-weight:700}.tab.active{background:#12395b;color:#fff}.pies{display:grid;grid-template-columns:1fr 1fr;gap:15px}.pie{width:180px;height:180px;border-radius:50%;margin:10px auto;position:relative}.pie:after{content:"";position:absolute;inset:36px;background:#fff;border-radius:50%}.legend{font-size:11px}.legend div{display:flex;justify-content:space-between;margin:6px 0}.bars{max-height:340px;overflow:auto}.barrow{display:grid;grid-template-columns:230px 1fr 75px;gap:8px;align-items:center;margin:8px 0;font-size:11px}.track{height:15px;background:#e8eef3;border-radius:99px}.bar{height:100%;background:#2878b5;border-radius:99px}.table{max-height:540px;overflow:auto;border:1px solid #dce5ed;border-radius:10px}table{width:100%;border-collapse:collapse;font-size:11px}th{position:sticky;top:0;background:#eaf1f6;padding:9px;text-align:left}td{padding:8px;border-bottom:1px solid #edf2f6}.badge{padding:3px 7px;border-radius:99px;font-weight:700;font-size:10px}.active{background:#e2f3e9;color:#246b4c}.inactive{background:#fde7e7;color:#943d3d}.foot{font-size:10px;color:#6e7f8f;margin-top:10px;line-height:1.5}.formasi-summary{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;margin:12px 0}.mini{background:#f7fafc;border:1px solid #e2eaf0;border-radius:10px;padding:11px}.mini b{display:block;font-size:20px;margin-top:4px}.formasi-table{max-height:520px;overflow:auto;border:1px solid #dce5ed;border-radius:10px}.formasi-table table{font-size:11px}.status-kurang{font-weight:800;color:#943d3d}.status-sesuai{font-weight:800;color:#246b4c}.formasi-bar{height:100%;background:#2878b5;border-radius:99px}.formasi-barrow{display:grid;grid-template-columns:150px 1fr 90px;gap:8px;align-items:center;margin:7px 0;font-size:11px}@media(max-width:900px){.formasi-summary{grid-template-columns:2fr 2fr}.formasi-barrow{grid-template-columns:120px 1fr 70px}}@media(max-width:600px){.formasi-summary{grid-template-columns:1fr 1fr}}@media(max-width:1100px){.kpis{grid-template-columns:repeat(3,minmax(0,1fr))}}@media(max-width:900px){.grid{grid-template-columns:1fr}.kpis{grid-template-columns:repeat(2,minmax(0,1fr))}.pies{grid-template-columns:1fr}}@media(max-width:600px){.kpis{grid-template-columns:1fr}.wrap{padding:10px}.barrow{grid-template-columns:120px 1fr 60px}}
+.profile-grid{align-items:stretch}.channel-layout{display:grid;grid-template-columns:180px 1fr;gap:18px;align-items:center;margin-top:8px}.channel-pie{width:180px;height:180px;border-radius:50%;margin:10px auto;position:relative}.channel-pie:after{content:"264";position:absolute;inset:43px;background:#fff;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:24px;font-weight:800;color:#163047}.channel-legend div{display:flex;justify-content:space-between;gap:12px;margin:8px 0}.channel-dot{display:inline-block;width:10px;height:10px;border-radius:50%;margin-right:6px}@media(max-width:900px){.channel-layout{grid-template-columns:1fr}.channel-pie{margin:10px auto}}</style></head><body><div class="wrap">
 <div class="hero"><div class="title">Executive Dashboard — Pejabat Lelang Kelas II</div><div class="sub">Realisasi kinerja s.d. Juli 2026 · data aktif per 25 Agustus 2026 · profil penyelenggaraan 2024–2025 · formasi 2026 · histori 2023–2025</div>
 <div class="toolbar"><select id="kanwil"><option value="ALL">Semua Kanwil</option></select><select id="metric"><option value="pokok">Ranking Pokok</option><option value="pnbp">Ranking Bea Lelang</option><option value="frekuensi">Ranking Frekuensi</option><option value="produktif">Ranking Produktivitas</option></select><select id="status"><option value="ALL">Semua Status</option><option value="Aktif">Aktif</option><option value="Tidak aktif">Tidak aktif (tidak ditampilkan)</option></select><input id="search" placeholder="Cari nama PL-II"/></div></div>
 <div class="kpis" id="kpis"></div>
 <div class="grid">
 </div>
-<div class="grid kpi-grid">
-<div class="card"><span class="muted">Pokok Lelang</span><div class="big" id="kPokok">Rp0</div><span class="muted" id="tPokok"></span></div>
-<div class="card"><span class="muted">Bea Lelang / PNBP</span><div class="big" id="kPnbp">Rp0</div><span class="muted" id="tPnbp"></span></div>
-<div class="card"><span class="muted">Frekuensi Lelang</span><div class="big" id="kFrek">0</div><span class="muted">Realisasi s.d. Juli 2026</span></div>
-<div class="card"><span class="muted">PL-II Aktif Wilayah</span><div class="big" id="kPlWilayah">0</div><span class="muted">Aktif per 25 Agustus 2026</span></div>
-<div class="card"><span class="muted">PL-II Nasional</span><div class="big" id="kPlNasional">0</div><span class="muted">Aktif per 25 Agustus 2026</span></div>
-</div><div class="card"><b>Top 10 PL-II</b><div class="bars" id="top10"></div></div></div>
+<div class="grid"><div class="card"><b>Kinerja Agregat per Kanwil</b><div class="tabs"><button class="tab active" data-c="pokok">Capaian Pokok</button><button class="tab" data-c="pnbp">Capaian PNBP</button><button class="tab" data-c="produktif">Produktivitas</button></div><div class="bars" id="kanwilChart"></div></div><div class="card"><b>Top 10 PL-II</b><div class="bars" id="top10"></div></div></div>
 <div class="card" style="margin-top:15px"><b>Kinerja Individual PL-II — 2026 (186 PL-II Aktif per 25 Agustus 2026)</b><div class="table" style="margin-top:12px"><table><thead><tr><th>#</th><th>Pejabat</th><th>Kanwil</th><th>Status</th><th>Pokok</th><th>Bea Lelang</th><th>Frek.</th><th>Lot</th><th>Prod.</th><th>Keterangan</th></tr></thead><tbody id="ind"></tbody></table></div></div>
 <div class="card" style="margin-top:15px"><b>Capaian 3 Tahun Terakhir per PL-II</b><div class="table" style="margin-top:12px"><table><thead><tr><th>#</th><th>Pejabat</th><th>Kanwil</th><th>2023 Pokok</th><th>2023 PNBP</th><th>2023 Frek.</th><th>2024 Pokok</th><th>2024 PNBP</th><th>2024 Frek.</th><th>2025 Pokok</th><th>2025 PNBP</th><th>Δ Pokok</th></tr></thead><tbody id="hist"></tbody></table></div><div class="foot">Sumber histori: Data Peringkat PL2 2023 s.d 2025.xlsx. Frekuensi 2025 tidak tersedia pada file histori tersebut.</div></div>
 <div class="grid profile-grid" style="margin-top:15px">
@@ -40,47 +29,25 @@ const D={"detail":[{"kanwil":"Aceh","nama":"Firman Saputra, S.H.","pokok":851040
 const kf=f('kanwil'),mf=f('metric'),sf=f('status'),q=f('search');[...new Set(D.hist.map(x=>x.kanwil||x.hist_kanwil).filter(Boolean))].sort().forEach(x=>kf.add(new Option(x,x)));let topMetric=mf.value;
 function sel(){let k=kf.value,s=sf.value,t=q.value.toLowerCase();return D.detail.map(x=>({...x})).filter(x=>(k==='ALL'||x.kanwil===k)&&(!t||x.nama.toLowerCase().includes(t))&&(s==='ALL'||s==='Aktif'))}
 function renderKpi(){
-  const y='2026';
-  const d=sel(y);
-  const pok=d.reduce((s,r)=>s+(+r.pokok||0),0);
-  const pnbp=d.reduce((s,r)=>s+(+r.pnbp||0),0);
-  const frek=d.reduce((s,r)=>s+(+r.frekuensi||0),0);
+let a=kf.value==='ALL'
+?{target_pokok:D.summary.reduce((s,x)=>s+x.target_pokok,0),realisasi_pokok:D.summary.reduce((s,x)=>s+x.realisasi_pokok,0),target_pnbp:D.summary.reduce((s,x)=>s+x.target_pnbp,0),realisasi_pnbp:D.summary.reduce((s,x)=>s+x.realisasi_pnbp,0),frekuensi:D.summary.reduce((s,x)=>s+x.frekuensi,0),lot:D.summary.reduce((s,x)=>s+x.lot,0)}
+:D.summary.find(x=>x.kanwil===kf.value);
 
-  const nasional=Array.isArray(D.active)?D.active:(
-    Array.isArray(D.aktif)?D.aktif:(
-      Array.isArray(D.pl2)?D.pl2:[]
-    )
-  );
+let p=a.frekuensi?a.lot/a.frekuensi:0;
+let activeRows=(D.detail||[]).filter(x=>String(x.status||'').toLowerCase()==='aktif');
+let nasional=D.active_count||activeRows.length;
+let wilayah=kf.value==='ALL'
+?nasional
+:activeRows.filter(x=>x.kanwil===kf.value).length;
 
-  const activeRows=nasional.filter(r=>{
-    const st=String(r.status||r.Status||'').toLowerCase();
-    return !st || st.includes('aktif');
-  });
-
-  const totalNasional=activeRows.length || Number(D.activeCount||D.aktifCount||D.totalAktif||186);
-
-  const selectedKanwil=f('kanwil').value;
-  const wilayahRows=selectedKanwil==='ALL'
-    ? activeRows
-    : activeRows.filter(r=>{
-        const kw=String(r.kanwil||r.Kanwil||r.wilayah||r.Wilayah||'').trim();
-        return kw===selectedKanwil;
-      });
-
-  const totalWilayah=selectedKanwil==='ALL'
-    ? totalNasional
-    : wilayahRows.length;
-
-  f('kPokok').textContent=rpT(pok);
-  f('kPnbp').textContent=rpM(pnbp);
-  f('kFrek').textContent=n(frek);
-  f('kPlWilayah').textContent=n(totalWilayah);
-  f('kPlNasional').textContent=n(totalNasional);
-
-  const targetPokok=Number(D.targetPokok||0);
-  const targetPnbp=Number(D.targetPnbp||0);
-  f('tPokok').textContent=targetPokok?`Target ${rpT(targetPokok)} · ${(pok/targetPokok*100).toFixed(1)}%`:'Realisasi s.d. Juli 2026';
-  f('tPnbp').textContent=targetPnbp?`Target ${rpM(targetPnbp)} · ${(pnbp/targetPnbp*100).toFixed(1)}%`:'Realisasi s.d. Juli 2026';
+f('kpis').innerHTML=[
+['Pokok Lelang',rp(a.realisasi_pokok),'Target '+rp(a.target_pokok)+' · '+pc(a.realisasi_pokok/a.target_pokok)],
+['Bea Lelang / PNBP',rp(a.realisasi_pnbp),'Target '+rp(a.target_pnbp)+' · '+pc(a.realisasi_pnbp/a.target_pnbp)],
+['Frekuensi Lelang',n(a.frekuensi),'Realisasi s.d. Juli 2026'],
+['PL-II Aktif Wilayah',n(wilayah),kf.value==='ALL'?'Semua Kanwil':'Aktif di '+kf.value+' · per 25 Agustus 2026'],
+['PL-II Nasional',n(nasional),'Total aktif nasional · per 25 Agustus 2026'],
+['Produktivitas',p.toFixed(1)+' lot/frek','Lot ÷ Frekuensi']
+].map(x=>`<div class="card kpi"><span class="muted">${x[0]}</span><b>${x[1]}</b><span class="muted">${x[2]}</span></div>`).join('')
 }
 function org(){let o=D.overall[orgYear],tf=o.kantor_frek+o.balai_frek||1,tp=o.kantor_pokok+o.balai_pokok||1,a=o.kantor_frek/tf*100,b=o.kantor_pokok/tp*100;f('pf').style.background=`conic-gradient(#2878b5 0 ${a}%,#d7782d ${a}% 100%)`;f('pp').style.background=`conic-gradient(#2878b5 0 ${b}%,#d7782d ${b}% 100%)`;f('lf').innerHTML=`<div><span>🔵 Kantor PL-II</span><b>${n(o.kantor_frek)} · ${a.toFixed(1)}%</b></div><div><span>🟠 Balai Lelang</span><b>${n(o.balai_frek)} · ${(100-a).toFixed(1)}%</b></div>`;f('lp').innerHTML=`<div><span>🔵 Kantor PL-II</span><b>${rp(o.kantor_pokok)} · ${b.toFixed(1)}%</b></div><div><span>🟠 Balai Lelang</span><b>${rp(o.balai_pokok)} · ${(100-b).toFixed(1)}%</b></div>`}
 function bars(){const val=x=>{if(chart==='produktif')return Number(x.produktif||x.produktivitas||0);if(chart==='pokok'){if(Number(x.target_pokok))return Number(x.realisasi_pokok||x.pokok||0)/Number(x.target_pokok)*100;return Number(x.capaian_pokok||0)}if(Number(x.target_pnbp))return Number(x.realisasi_pnbp||x.pnbp||0)/Number(x.target_pnbp)*100;return Number(x.capaian_pnbp||0)};let r=[...D.summary].sort((a,b)=>val(b)-val(a)),mx=Math.max(...r.map(val),1);f('kanwilChart').innerHTML=r.map(x=>{let v=val(x);return`<div class="barrow"><span>${x.kanwil}</span><div class="track"><div class="bar" style="width:${Math.max(Math.min(v/mx*100,100),2)}%"></div></div><b>${chart==='produktif'?v.toFixed(1):pc(v)}</b></div>`}).join('')}
@@ -105,5 +72,5 @@ function formasiRender(){
  f('formasiTable').innerHTML=D.formasi.map(x=>`<tr><td>${x.no}</td><td><b>${x.kanwil}</b></td><td>${n(x.formasi)}</td><td>${n(x.aktif)}</td><td class="${x.selisih<0?'status-kurang':x.selisih>0?'status-sesuai':''}">${x.selisih>0?'+':''}${x.selisih}</td><td>${pc(x.capaian)}</td><td class="${x.status==='Kekurangan'?'status-kurang':'status-sesuai'}">${x.status}</td></tr>`).join('');
 }
 function history(){let d=D.hist.filter(x=>kf.value==='ALL'||(x.kanwil||x.hist_kanwil)===kf.value).sort((a,b)=>(b.y2025?.pokok||0)-(a.y2025?.pokok||0));f('hist').innerHTML=d.map((x,i)=>{let a=x.y2024?.pokok||0,b=x.y2025?.pokok||0,g=a&&b?b/a-1:null;return`<tr><td>${i+1}</td><td><b>${x.nama}</b></td><td>${x.kanwil||x.hist_kanwil||'-'}</td><td>${x.y2023?.pokok?rp(x.y2023.pokok):'-'}</td><td>${x.y2023?.pnbp?rp(x.y2023.pnbp):'-'}</td><td>${x.y2023?.frekuensi?n(x.y2023.frekuensi):'-'}</td><td>${a?rp(a):'-'}</td><td>${x.y2024?.pnbp?rp(x.y2024.pnbp):'-'}</td><td>${x.y2024?.frekuensi?n(x.y2024.frekuensi):'-'}</td><td>${b?rp(b):'-'}</td><td>${x.y2025?.pnbp?rp(x.y2025.pnbp):'-'}</td><td>${g===null?'-':pc(g)}</td></tr>`}).join('')}
-function render(){renderKpi();org();bars();top10();ind();history();channel();formasiRender()}document.querySelectorAll('[data-y]').forEach(b=>b.onclick=()=>{document.querySelectorAll('[data-y]').forEach(x=>x.classList.remove('active'));b.classList.add('active');orgYear=b.dataset.y;org()});document.querySelectorAll('[data-c]').forEach(b=>b.onclick=()=>{document.querySelectorAll('[data-c]').forEach(x=>x.classList.remove('active'));b.classList.add('active');chart=b.dataset.c;bars()});kf.onchange=render;mf.onchange=render;sf.onchange=render;q.oninput=render;f('kanwil').addEventListener('change',render);f('metric').addEventListener('change',render);f('status').addEventListener('change',render);f('search').addEventListener('input',render);render();
+function render(){renderKpi();org();bars();top10();ind();history();channel();formasiRender()}document.querySelectorAll('[data-y]').forEach(b=>b.onclick=()=>{document.querySelectorAll('[data-y]').forEach(x=>x.classList.remove('active'));b.classList.add('active');orgYear=b.dataset.y;org()});document.querySelectorAll('[data-c]').forEach(b=>b.onclick=()=>{document.querySelectorAll('[data-c]').forEach(x=>x.classList.remove('active'));b.classList.add('active');chart=b.dataset.c;bars()});kf.onchange=render;mf.onchange=render;sf.onchange=render;q.oninput=render;render();
 </script></body></html>
